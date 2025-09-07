@@ -1,0 +1,146 @@
+.Pokemon{
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+.poke__name{
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.poke__layout{
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.poke__art{
+  display: grid;
+  place-items: center;
+  background: radial-gradient(300px 140px at 50% 40%, #ffffff 0%, #eef2f7 70%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+.poke__art img{
+  width: 260px;
+  height: 260px;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.poke__info{
+  display: grid;
+  gap: 10px;
+}
+
+.poke__row{
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 8px;
+  align-items: center;
+}
+.label{ color: var(--muted); }
+
+.poke__types{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.type{
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 700;
+  letter-spacing: .3px;
+  border: 1px solid rgba(0,0,0,.06);
+}
+
+/* type colors */
+.type--normal{background:#A8A77A}
+.type--fire{background:#EE8130}
+.type--water{background:#6390F0}
+.type--electric{background:#F7D02C;color:#0f172a}
+.type--grass{background:#7AC74C}
+.type--ice{background:#96D9D6;color:#0f172a}
+.type--fighting{background:#C22E28}
+.type--poison{background:#A33EA1}
+.type--ground{background:#E2BF65;color:#0f172a}
+.type--flying{background:#A98FF3}
+.type--psychic{background:#F95587}
+.type--bug{background:#A6B91A}
+.type--rock{background:#B6A136}
+.type--ghost{background:#735797}
+.type--dragon{background:#6F35FC}
+.type--dark{background:#705746}
+.type--steel{background:#B7B7CE;color:#0f172a}
+.type--fairy{background:#D685AD}
+
+/* abilities */
+.poke__abilities{
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.pill{
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  border: 1px solid var(--border);
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* description */
+.poke__desc{
+  margin: 0;
+  padding: 12px 14px;
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  line-height: 1.6;
+}
+
+/* stats */
+.poke__stats{
+  display: grid;
+  gap: 10px;
+}
+.stat{
+  display: grid;
+  grid-template-columns: 140px 40px 1fr;
+  gap: 10px;
+  align-items: center;
+}
+.stat__name{
+  text-transform: capitalize;
+  color: var(--muted);
+}
+.stat__val{
+  font-weight: 700;
+}
+.stat__bar{
+  height: 10px;
+  background: #eef2f7;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+.stat__fill{
+  height: 100%;
+  background: linear-gradient(90deg, #60a5fa, #22c55e);
+}
+
+@media (max-width: 800px){
+  .poke__layout{ grid-template-columns: 1fr; }
+  .poke__art img{ width: 220px; height: 220px; }
+  .stat{ grid-template-columns: 120px 36px 1fr; }
+}

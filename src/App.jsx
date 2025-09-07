@@ -4,6 +4,7 @@ import { Home } from './components/Home'
 import { Aboutme } from './components/Aboutme'
 import { TopTen } from './components/TopTen'
 import { CookieClicker } from './components/CookieClicker'
+import { Pokemon } from './components/Pokemon'
 
 export default function App() {
   const [page, setPage] = useState('home')
@@ -29,10 +30,15 @@ export default function App() {
           <button onClick={() => setPage('les2')}>Lesson 2</button>
           <button onClick={() => setPage('les3')}>Lesson 3</button>
           <button onClick={() => setPage('les4')}>Lesson 4</button>
+          <button onClick={() => setPage('les5')}>Lesson 5</button>
         </nav>
       </header>
 
-      {page === 'home' && <Home />}
+      {page === 'home' && (
+        <main style={{ padding: 24 }}>
+          <h1>Welcome to my website</h1>
+        </main>
+      )}
 
       {page === 'les2' && (
         <main className="page-single">
@@ -50,6 +56,12 @@ export default function App() {
       {page === 'les4' && (
         <main className="page-single">
           <CookieClicker />
+        </main>
+      )}
+
+      {page === 'les5' && (
+        <main className="page-single">
+          <Pokemon />
         </main>
       )}
     </>
