@@ -1,21 +1,20 @@
-import './AboutMe.css';
+import './Aboutme.css'
 
-export function AboutMe() {
+export function Aboutme() {
   return (
-    <article className="AboutMe">
+    <article className="AboutMe card">
       <img
         className="aboutMe__img"
         src="/image.png"
         alt="About me"
       />
-
       <div className="aboutMe__content">
         <h2 className="aboutMe__title">About Me</h2>
         <p className="aboutMe__paragraph">
-          wassup Im a beginning fullstack developer who loves building with React.
+          Wassup im a beginning fullstack developer who loves building with React.
           In my free time I hang out with my cat, learn new tech, and travel.
         </p>
       </div>
     </article>
-  );
+  )
 }

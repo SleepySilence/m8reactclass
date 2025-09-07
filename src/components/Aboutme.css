@@ -1,39 +1,30 @@
 .AboutMe {
-  max-width: 960px;
-  margin: 40px auto;
-  padding: 24px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.08);
-
+  width: 100%;
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 340px 1fr;
   gap: 24px;
-  align-items: start;
 }
 
 .aboutMe__img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 14px;
   object-fit: cover;
-  box-shadow: 0 2px 10px rgba(0,0,0,.06);
 }
 
 .aboutMe__title {
+  margin: 0 0 8px;
   font-size: 28px;
-  margin: 0 0 10px;
-  color: #2c3e50;
   font-weight: 800;
 }
 
 .aboutMe__paragraph {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
   margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size:17px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .AboutMe { grid-template-columns: 1fr; }
 }
