@@ -1,0 +1,13 @@
+.gallery-wrap .image-gallery{
+  border:1px solid var(--border);
+  border-radius:12px;
+  overflow:hidden;
+}
+.image-gallery-slide img{
+  max-height:480px;
+  object-fit:contain;
+  background:#fff;
+}
+.image-gallery-thumbnail img{
+  object-fit:cover;
+}

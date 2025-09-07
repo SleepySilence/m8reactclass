@@ -24,7 +24,7 @@ export function CookieClicker() {
       </div>
 
       <button className="cookie__big" onClick={() => setCookies(cookies + multiplier)}>
-        <img src="/cookie.png" alt="cookie" /> {/* place your image at /public/cookie.png */}
+        <img src={import.meta.env.BASE_URL + 'cookie.png'} alt="cookie" />
       </button>
 
       <div className="cookie__shop">
