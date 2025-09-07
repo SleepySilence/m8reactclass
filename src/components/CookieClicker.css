@@ -1,0 +1,104 @@
+.Cookie {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.cookie__title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.cookie__stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  gap: 12px;
+  color: var(--muted);
+}
+
+.cookie__stats > div {
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 500;
+}
+
+.cookie__big {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  justify-self: center;
+  transition: transform .08s ease, filter .2s ease;
+}
+
+.cookie__big:hover { 
+  transform: scale(1.03); 
+  filter: brightness(1.02); 
+}
+.cookie__big:active { 
+  transform: scale(0.98); 
+}
+.cookie__big:focus { 
+  outline: none; 
+}
+.cookie__big:focus-visible { 
+  outline: 2px solid var(--primary); 
+  border-radius: 10px; 
+}
+
+.cookie__big img {
+  width: 220px;   /* adjust this size if needed */
+  height: auto;
+  display: block;
+  object-fit: contain;
+  border: 0;
+  box-shadow: none;
+  image-rendering: auto;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,.18));
+}
+
+.cookie__shop {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.cookie__shop button {
+  border: 1px solid var(--border);
+  background: #f9fafb;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: transform .06s ease, background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.cookie__shop button:hover {
+  background: #eef2f7;
+  border-color: #d1d5db;
+  transform: translateY(-1px);
+}
+
+.cookie__shop button:active { 
+  transform: translateY(0); 
+}
+
+@media (max-width: 900px) {
+  .cookie__stats { grid-template-columns: 1fr; }
+  .cookie__shop { grid-template-columns: 1fr; }
+  .cookie__big img { width: 180px; }
+}
